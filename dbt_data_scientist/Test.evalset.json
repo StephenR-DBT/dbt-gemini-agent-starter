@@ -1,0 +1,68 @@
+{
+  "eval_set_id": "Test",
+  "name": "Test",
+  "description": null,
+  "eval_cases": [
+    {
+      "eval_id": "TestSession",
+      "conversation": [
+        {
+          "invocation_id": "e-19cfffe2-6a1c-4f0b-a4ab-da8f4eb3aed8",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "list my dbt models using the mcp server"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "Here is a list of the dbt models in your project, along with their unique IDs and descriptions:\n\n*   **order\\_items** (model.analytics.order\\_items): Intermediate model where we calculate item price, discounts and tax. This model is at the order item level.\n*   **part\\_suppliers** (model.analytics.part\\_suppliers): Intermediate model where we join part, supplier and part\\_supplier. This model is at the part supplier level.\n*   **fct\\_order\\_items** (model.analytics.fct\\_order\\_items): order items fact table\n*   **fct\\_orders** (model.analytics.fct\\_orders): orders fact table\n*   **agg\\_daily\\_returned\\_orders** (model.analytics.agg\\_daily\\_returned\\_orders)\n*   **agg\\_returned\\_orders\\_by\\_month** (model.analytics.agg\\_returned\\_orders\\_by\\_month)\n*   **agg\\_ship\\_modes\\_dynamic\\_pivot** (model.analytics.agg\\_ship\\_modes\\_dynamic\\_pivot): Example of creating a pivot table with hard-coded columns based on a query of the ship modes that are in the system\n*   **agg\\_ship\\_modes\\_hardcoded\\_pivot** (model.analytics.agg\\_ship\\_modes\\_hardcoded\\_pivot): Example of creating a pivot table with dynamic columns based on the ship modes that are in the system\n*   **customer\\_flags** (model.analytics.customer\\_flags)\n*   **customer\\_tier** (model.analytics.customer\\_tier): puts customers into tiers (1-4)\n*   **dim\\_customers** (model.analytics.dim\\_customers.v1): Customer dimensions table\n*   **dim\\_customers** (model.analytics.dim\\_customers.v2): Customer dimensions table\n*   **dim\\_parts** (model.analytics.dim\\_parts): Parts dimensions table\n*   **dim\\_suppliers** (model.analytics.dim\\_suppliers): Suppliers dimensions table\n*   **monthly\\_gross\\_revenue** (model.analytics.monthly\\_gross\\_revenue)\n*   **stg\\_movie\\_reviews** (model.analytics.stg\\_movie\\_reviews): This model processes raw movie reviews by renaming columns for clarity. It is used to analyze the sentiment of movie reviews by providing the review text and its associated sentiment score.\n*   **stg\\_tpch\\_customers** (model.analytics.stg\\_tpch\\_customers): staging layer for customers data\n*   **stg\\_tpch\\_line\\_items** (model.analytics.stg\\_tpch\\_line\\_items): staging layer for line items data\n*   **stg\\_tpch\\_nations** (model.analytics.stg\\_tpch\\_nations): staging layer for nations data\n*   **stg\\_tpch\\_orders** (model.analytics.stg\\_tpch\\_orders): staging layer for orders data\n*   **stg\\_tpch\\_parts** (model.analytics.stg\\_tpch\\_parts): staging layer for parts data\n*   **stg\\_tpch\\_part\\_suppliers** (model.analytics.stg\\_tpch\\_part\\_suppliers): staging layer for suppliers data\n*   **stg\\_tpch\\_regions** (model.analytics.stg\\_tpch\\_regions): staging layer for regions data\n*   **stg\\_tpch\\_suppliers** (model.analytics.stg\\_tpch\\_suppliers): staging layer for suppliers data\n*   **time\\_spine\\_daily** (model.analytics.time\\_spine\\_daily)\n*   **time\\_spine\\_hourly** (model.analytics.time\\_spine\\_hourly)\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-a1875c00-4432-43ed-95e3-ae6c578c857f",
+                "args": {},
+                "name": "get_all_models"
+              }
+            ],
+            "tool_responses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1759956183.805493
+        }
+      ],
+      "session_input": {
+        "app_name": "dbt_data_scientist",
+        "user_id": "user",
+        "state": {}
+      },
+      "creation_timestamp": 1759956273.282218
+    }
+  ],
+  "creation_timestamp": 1759956259.1998122
+}

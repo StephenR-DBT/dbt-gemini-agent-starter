@@ -12,7 +12,9 @@ from google.adk.models.lite_llm import LiteLlm
 from . import prompts
 from .tools import (
     dbt_compile,
-    dbt_mcp_toolset
+    dbt_mcp_toolset,
+    dbt_translate,
+    dbt_identify_translation_candidates
 )
 from .sub_agents import (
     dbt_model_analyzer_agent
@@ -27,7 +29,7 @@ root_agent = Agent(
     ),
     instruction=prompts.ROOT_AGENT_INSTR,
     sub_agents=[dbt_model_analyzer_agent],
-    tools=[dbt_compile, dbt_mcp_toolset]
+    tools=[dbt_compile, dbt_mcp_toolset, dbt_translate, dbt_identify_translation_candidates]
 )
 
 # # --- Example Agent using OpenAI's GPT-4o ---
